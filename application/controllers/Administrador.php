@@ -56,10 +56,13 @@ class Administrador extends CI_Controller {
 			$crud->set_table('publicacion');
 			$crud->set_subject('Publicación');
 			$crud->required_fields('titulo', 'descripcion', 'path_imagen');
-			$crud->columns('id_carrusel','titulo', 'descripcion', 'path_imagen');
+			$crud->columns('id_publicacion','titulo', 'descripcion', 'path_imagen', 'iframe');
  
 			$crud->display_as('path_imagen','Imagen'); 
  			$crud->set_field_upload('path_imagen','assets/img/publicacion');
+
+ 			$crud->callback_column('iframe',array($this,'add_field_callback_1'));
+
 
 			$output = $crud->render();
 
@@ -94,7 +97,10 @@ class Administrador extends CI_Controller {
 		}
 	}
  
-	
+	function add_field_callback_1($value, $row)
+	{
+		return $value.'';
+	}
 
 
 }
