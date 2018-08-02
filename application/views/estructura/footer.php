@@ -1,36 +1,27 @@
-    <section id="footer"  style="color: white"> 
+    <section id="footer"  style="color: white" class="seccion"> 
         
         
-        <section id="sub_footer" style="background-color: #002550 ; padding: 20px 0px;">
+        <section id="sub_footer" style="background-color: #1b756f ; padding: 20px 0px;">
            <div class="container">
             <div class="row " >
                
                   <div class="col-md-4 col-xs-12 "> 
 
-                        <p>Billinghurst 1833 - Piso 10, Buenos Aires - Argentina</p>
-                        <p>+5411 4821-2105</p>
-                        <p>informes@fundacionsidom.org</p>
+                        <p>V. Gerde 97, B1718BLA San Antonio de Padua, Buenos Aires</p>
+                        <p>+5411 5873 1547</p>
+                        <p>+5411 6874 9618 </p>
 
                   </div>
-                   <div class="col-md-4 col-xs-12 " > 
+                  <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Home">Home</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>La_fundacion">La Fundación</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Educacion">Educación</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Investigacion">Investigación</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Novedad">Novedades</a></li>  
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Home"> Home</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>La_fundacion">Publicaciones</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Educacion">Nuestra cancha</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Investigacion">Contacto</a></li> 
                         </ul>
                   </div>
-                   <div class="col-md-4 col-xs-12 " > 
-                        <ul class="item-footer">
-
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Consultoria">Consultoría y Asistencia Técnica</a></li> 
-
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Indicadores">Indicadores y Legislación</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Convenio">Convenios</a></li>
-                            <li><i class="fab fa-pushed"></i>  <a class="link_footer" href="<?=base_url()?>Contacto">Consultas</a></li>
-                          </ul>
-                  </div>
+               
+                    
                 
             </div>
           </div>
@@ -38,14 +29,14 @@
 
         
 
-        <section id="sub_footer" style="background-color: #01152b; padding-top: 20px; padding-bottom: 20px; text-align: center ">
+        <section id="sub_footer" style="background-color: #228c85; padding-top: 20px; padding-bottom: 20px; text-align: center ">
           <div class="container">
             <div class="row" >
                 
                   <div class="col-md-12 col-xs-12 " > 
                     
 
-                    ©2018 Fundación SIDOM
+                    ©2018 TORNEO FUERTE AL MEDIO
 
                     </div>
                   
@@ -58,7 +49,7 @@
 
   	</body>
   	
-    <!-- Jquery validate -->
+    <!-- Jquery validate 
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js" ></script>
 
@@ -241,8 +232,25 @@
           }
         }]
       });
-});
+    });
+ 
+	</script>-->
 
-	</script>
+  <!-- Bootstrap core jquery -->
+
+  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
+
+  <!-- Bootstrap  -->
+  <script type="text/javascript" src="<?=base_url()?>assets/dist/js/bootstrap.min.js"  ></script>  
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.bundle.min.js"></script> 
+
+  <!-- Plugin JavaScript -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/scrolling-nav.js"></script>
+
 
 </html>

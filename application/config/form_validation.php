@@ -72,51 +72,7 @@ $config = array(
                                             'label' => 'consulta',
                                             'rules' => 'trim|xss_clean'
                                         )
-                                ),
-
-              'buscar_cursos' => array(
-                                    array(
-                                            'field' => 'id_tema',
-                                            'label' => 'id_tema',
-                                            'rules' => 'trim|xss_clean|callback_validate_either'
-                                        ),
-                                    array(
-                                            'field' => 'id_modalidad',
-                                            'label' => 'id_modalidad',
-                                            'rules' => 'trim|xss_clean|callback_validate_either'
-                                        ) 
-                                ),
-
-              /*
-              'buscar_investigacion' => array(
-                                    array(
-                                            'field' => 'id_tipo',
-                                            'label' => 'id_tipo',
-                                            'rules' => 'trim|xss_clean|required'
-                                        ) 
-                                ),*/
-                
-                'buscar_investigacion' => array(
-                                    array(
-                                            'field' => 'anio',
-                                            'label' => 'anio',
-                                            'rules' => 'trim|xss_clean|required'
-                                        ) 
-                                ),
-
-                'buscar_investigacion_tipo' => array(
-                                    array(
-                                            'field' => 'anio',
-                                            'label' => 'anio',
-                                            'rules' => 'trim|xss_clean|required'
-                                        ),
-                                    array(
-                                            'field' => 'id_tipo_investigacion',
-                                            'label' => 'id_tipo_investigacion',
-                                            'rules' => 'trim|xss_clean|required'
-                                        ) 
-                                ),
-         
+                                ) 
                                 
 );
 

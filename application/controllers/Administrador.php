@@ -55,7 +55,7 @@ class Administrador extends CI_Controller {
 			$crud->set_theme('datatables');
 			$crud->set_table('publicacion');
 			$crud->set_subject('Publicación');
-			$crud->required_fields('titulo', 'descripcion', 'path_imagen');
+			$crud->required_fields('titulo' );
 			$crud->columns('id_publicacion','titulo', 'descripcion', 'path_imagen', 'iframe');
  
 			$crud->display_as('path_imagen','Imagen'); 
