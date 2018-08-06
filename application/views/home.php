@@ -1,15 +1,56 @@
 <?=$head?>
 
  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
   
 
 <link href="<?=base_url()?>/assets/css/home_css.css" rel="stylesheet">
 
-<section id="serccion_home">
+<style type="text/css">
+  .parent {
+    width: 100%;
+    margin: 20px;  
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block; 
+}
 
-    <!-- Carrusel -->
-    <section id="carrusel">  
+.area-imagen {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+.parent:hover .area-imagen, .parent:focus .area-imagen {
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.parent:hover .area-imagen:before, .parent:focus .area-imagen:before {
+    display: block;
+}
+
+.parent:hover a, .parent:focus a {
+    display: block;
+}
+ 
+
+</style>
+
+<section id="home">
+
+    <!-- HOME -->
+    <section id="seccion_home">  
       
       <div class="row">
           
@@ -24,29 +65,44 @@
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner"">
+                    <div class="carousel-inner" id="carousel-inner" >
                       <div class="item active">
                          <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider1.jpg" alt="First slide">
                          <div class="shadow"></div>
                          
-                         <div class="container">
-                         <div class="slide_div_titulo">
+                          <div class="container">
+                            <div class="slide_div_titulo">
                             
-                              <p class="slide_titulo1">Apertura 2018</p><br>
-                              <p class="slide_titulo2">COMIENZA EL NUEVO TORNEO</p><br>
+                              <p class="slide_titulo1">Apertura 2018</p>
+                              <p class="slide_titulo2">COMIENZA EL NUEVO TORNEO</p>
                               <p class="slide_descripcion">Anotate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana y recopa.</p>
                             </div>
-                         </div>
+                          </div>
                       </div>
 
                       <div class="item">
                         <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider2.jpg"  >
                         <div class="shadow"></div>
+                        <div class="container">
+                            <div class="slide_div_titulo">
+                            
+                              <p class="slide_titulo1">Apertura 2018 y Recopa 2018</p>
+                              <p class="slide_titulo2">COMIENZA LA COPA DE CAMPEONES</p>
+                              <p class="slide_descripcion">Anoasd asd aa sdasdasd asdtate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana  asd as asdas dy recopa.</p>
+                            </div>
+                          </div>
                       </div>
                     
                       <div class="item">
                         <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider3.jpg" alt="Third slide">
                         <div class="shadow"></div>
+                        <div class="container">
+                            <div class="slide_div_titulo">
+                             
+                              <p class="slide_titulo2">FELICITACIONES AL CAMPEON 2018</p>
+                              <p class="slide_descripcion">Anotate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana y recopa.</p>
+                            </div>
+                          </div>
                       </div>
                     </div>
    
@@ -57,7 +113,7 @@
     </section>
 
     <!-- PUBLICACIONES -->
-    <section id="publicaciones" class="seccion" >  
+    <section id="seccion_publicaciones" class="seccion" >  
       
         <div class="row"  >
           <div class="container">
@@ -90,7 +146,7 @@
       
     </section>
 
-    <!-- Patrocinadores -->
+    <!-- PATROCINADORES -->
     <section id="patrocinadores" class="seccion">  
 
         <div class="row">
@@ -125,8 +181,8 @@
 
     </section>
 
-    <!-- Fotos del lugar -->
-    <section id="fotos_lugar" class="seccion">  
+    <!-- NUESTRA CANCHA -->
+    <section id="seccion_nuestra_cancha" class="seccion">  
       <div class="row">
         <div class="container">
         
@@ -136,26 +192,51 @@
  
         </div>
 
-        <div class="col-md-6 col-xs-12" > 
-            <img src="<?=base_url()?>assets/img/cancha/foto_cancha.jpg"  class="foto_cancha">
+         
+          <div class="col-md-6 col-xs-12  " > 
+            <div class="parent" >
+              <div class="area-imagen">
+
+                <img src="<?=base_url()?>assets/img/cancha/foto_cancha.jpg"  class="foto_cancha">
+
+              </div>
+            </div>
+          </div>
+       
+
+        <div class="col-md-3 col-xs-12"> 
+          <div class="parent" >
+              <div class="area-imagen">
+                <img src="<?=base_url()?>assets/img/cancha/foto_golf.jpg"  class="foto_cancha"> 
+              </div>
+            </div>
         </div>
         <div class="col-md-3 col-xs-12"> 
-          <img src="<?=base_url()?>assets/img/cancha/foto_golf.jpg"  class="foto_cancha"> 
+          <div class="parent" >
+              <div class="area-imagen">
+                <img src="<?=base_url()?>assets/img/cancha/foto_deck.jpg"  class="foto_cancha">  
+              </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-xs-12" style="padding-top: 0px"> 
+          <div class="parent" >
+              <div class="area-imagen">
+                <img src="<?=base_url()?>assets/img/cancha/foto_pileta.jpg"  class="foto_cancha">  
+              </div>
+            </div>
         </div>
         <div class="col-md-3 col-xs-12"> 
-          <img src="<?=base_url()?>assets/img/cancha/foto_deck.jpg"  class="foto_cancha">  
-        </div>
-        <div class="col-md-3 col-xs-12"> 
-          <img src="<?=base_url()?>assets/img/cancha/foto_pileta.jpg"  class="foto_cancha">  
-        </div>
-        <div class="col-md-3 col-xs-12"> 
-          <img src="<?=base_url()?>assets/img/cancha/foto_pileta.jpg"  class="foto_cancha">  
+          <div class="parent" >
+              <div class="area-imagen">
+                <img src="<?=base_url()?>assets/img/cancha/foto_pileta.jpg"  class="foto_cancha">  
+              </div>
+            </div>
         </div>
       </div>
     </section>
 
     <!-- Escribinos -->
-    <section id="contacto" class="seccion">  
+    <section id="seccion_contacto" class="seccion">  
       <div class="row">
         <div class="container">
         
@@ -189,7 +270,7 @@
 
 
             <p>
-                    <?php echo form_submit( 'submit', 'Submit', 'class="btn btn-primary btn-block" style="background-color: #2c8787" '); ?>
+                    <?php echo form_submit( 'submit', 'Enviar', 'class="btn btn-primary btn-block" style="background-color: #228d87" '); ?>
             </p>
 
             <?php echo form_close(); ?>
@@ -206,11 +287,6 @@
         </div>
       </div>
     </section>
-
-   
-    
-
-  
 
 </section>
  

@@ -9,7 +9,7 @@
    
     <link rel="shortcut icon" href="<?=base_url()?>assets/img/favicon.ico" type="image/x-icon">
     
-    <link href="<?=base_url()?>assets/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+     <link href="<?=base_url()?>assets/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" >  
 
     <link href="<?=base_url()?>assets/dist/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" >
 
@@ -33,8 +33,7 @@
     
 
     </head>
-  <body>
- 
+  <body> 
     <section id="header"> 
       <div class="row">
 
@@ -53,19 +52,19 @@
                     </div>
                   </div>
                   <div id="navbar" class="navbar-collapse collapse">
-                  
+                   
                     <div class="navbar-form navbar-right" role="form">
                       <div class="form-group">
-                        <a href="#home"> Home </a>
+                        <a class="nav-link js-scroll-trigger active" href="#seccion_home"> Home </a>
                       </div>
                       <div class="form-group">
-                        <a href="#publicaciones"> Publicaciones </a>
+                        <a class="nav-link js-scroll-trigger" href="#seccion_publicaciones"> Publicaciones </a>
                       </div>
                       <div class="form-group">
-                        <a href="#nuestra_cancha"> Nuestra cancha </a>
+                        <a class="nav-link js-scroll-trigger" href="#seccion_nuestra_cancha"> Nuestra cancha </a>
                       </div> 
                       <div class="form-group nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contacto">Contacto</a>
+                        <a class="nav-link js-scroll-trigger" href="#seccion_contacto">Contacto</a>
                       </div>
                     </div>
 
@@ -73,6 +72,25 @@
                   </div><!--/.navbar-collapse  -->
                 </div>
               </nav>
+
+              <script>
+
+                // Add active class to the current button (highlight it)
+                var header = document.getElementById("navbar");
+
+                var btns = header.getElementsByClassName("nav-link js-scroll-trigger");
+
+                for (var i = 0; i < btns.length; i++) 
+                {
+                    btns[i].addEventListener("click", function() 
+                    {
+                      var current = document.getElementsByClassName("active");
+                      current[0].className = current[0].className.replace(" active", "");
+                      this.className += " active";
+                    }); 
+                }
+              
+              </script>
             <!-- Navigation -->
 
 

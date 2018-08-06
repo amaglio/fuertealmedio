@@ -1,7 +1,7 @@
     <section id="footer"  style="color: white" class="seccion"> 
         
         
-        <section id="sub_footer" style="background-color: #1b756f ; padding: 20px 0px;">
+        <section id="sub_footer" style="background-color: #228d87 ; padding: 20px 0px;">
            <div class="container">
             <div class="row " >
                
@@ -14,10 +14,10 @@
                   </div>
                   <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Home"> Home</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>La_fundacion">Publicaciones</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Educacion">Nuestra cancha</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer" href="<?=base_url()?>Investigacion">Contacto</a></li> 
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_home"> Home</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_publicaciones">Publicaciones</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_nuestra_cancha">Nuestra cancha</a></li>
+                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_contacto">Contacto</a></li> 
                         </ul>
                   </div>
                
@@ -29,7 +29,7 @@
 
         
 
-        <section id="sub_footer" style="background-color: #228c85; padding-top: 20px; padding-bottom: 20px; text-align: center ">
+        <section id="sub_footer" style="background-color: #267373; padding-top: 20px; padding-bottom: 20px; text-align: center ">
           <div class="container">
             <div class="row" >
                 
@@ -49,18 +49,39 @@
 
   	</body>
   	
-    <!-- Jquery validate 
+    
+  
+  <!-- Bootstrap core jquery -->
+
+  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
+
+  <!-- Bootstrap  -->
+  <script type="text/javascript" src="<?=base_url()?>assets/dist/js/bootstrap.min.js"  ></script>  
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.bundle.min.js"></script> 
+
+  <!-- Plugin JavaScript -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/scrolling-nav.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+
+  <!-- Jquery validate -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js" ></script>
 
 
     <script>
-		var jq_va = jQuery.noConflict();
-	</script>
-	
-	<script type="text/javascript">
+    var jq_va = jQuery.noConflict();
+  </script>
+  
+  <script type="text/javascript">
 
-	  jq_va(function(){
+    jq_va(function(){
 
             jq_va('#form_contacto').validate({
 
@@ -234,23 +255,7 @@
       });
     });
  
-	</script>-->
-
-  <!-- Bootstrap core jquery -->
-
-  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
-
-  <!-- Bootstrap  -->
-  <script type="text/javascript" src="<?=base_url()?>assets/dist/js/bootstrap.min.js"  ></script>  
-
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="<?=base_url()?>assets/js/bootstrap.bundle.min.js"></script> 
-
-  <!-- Plugin JavaScript -->
-  <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom JavaScript for this theme -->
-  <script type="text/javascript" src="<?=base_url()?>assets/js/scrolling-nav.js"></script>
+  </script> 
 
 
 </html>
