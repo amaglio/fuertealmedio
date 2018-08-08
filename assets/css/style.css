@@ -437,7 +437,7 @@ input.btn.btn-primary.btn-block
 iframe{
     width: -webkit-fill-available;
     height: auto;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
 }
 
 /*
@@ -470,6 +470,22 @@ iframe{
     z-index: 2;
 }*/
 
+.slide_div_titulo {
+    top: 0;
+    left: 0px;
+    width: -webkit-fill-available;
+    background-color: #2c8989bd;
+    height: -webkit-fill-available;
+    padding: 20px;
+    position: absolute;
+    color: white;
+    /* width: auto; */
+    /*padding: 50px 20px;*/
+ 
+    border: 1px solid #247373;
+}
+
+/*
 .slide_div_titulo{
 
       top: 15%;
@@ -484,20 +500,30 @@ iframe{
 border-radius: 10px;
     border: 1px solid #247373;
 
-}
+}*/
 
 .slide_titulo1{
   font-size: 24px;
-
+  color: #fec400;
+  font-weight: 500;
+  line-height: 1.2;
+      letter-spacing: 1px;
+      font-weight: 500  ;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.68);
 }
 
 .slide_titulo2{
   font-size: 40px;
   font-weight: 500;
+  line-height: 1.2;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.68);
 }
 
 .slide_descripcion{
-  font-size: 15px; 
+  font-size: 18px;
+    line-height: 1.5; 
+  width: 50%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.68);
 }
 
 
@@ -515,6 +541,13 @@ a:hover[class="nav-link js-scroll-trigger"]
     
 }
 
+a:hover[class="link_footer nav-link js-scroll-trigger"] 
+{ 
+  color: #080808;
+    
+}
+
+
 a.nav-link.js-scroll-trigger.active{
   border-bottom: 3px solid #228d87;
   font-size: 13px;
@@ -523,7 +556,7 @@ a.nav-link.js-scroll-trigger.active{
 }
 
 #carousel-inner {
-    height: 600px !important;
+    height: 550px !important;
 }
 
 
@@ -535,12 +568,18 @@ div.parent{
   margin-top: 0px;
 }
 
+.container_slider{
+  padding-top: 10%;
+}
+
 
 /*Mobile*/
 
 @media only screen and (max-width: 768px) 
 {
-    
+  .container_slider{
+    padding-top: 0%;
+  }     
 
   #carousel-inner 
   {
@@ -550,9 +589,10 @@ div.parent{
 
   .slide_div_titulo
   {
-    padding:10PX;
-    margin: 5px;
+    /*padding:0px 10PX;
+    margin: 5px;*/
     left: 0px;
+    margin-top: 0%;
   }
 
   .slide_titulo1 {
@@ -575,5 +615,10 @@ div.parent{
   .navbar-toggle { 
       background-color: #2c8787;
   }
+
+  .slide_descripcion{ 
+    width: 100%;
+  }
+
 
 }

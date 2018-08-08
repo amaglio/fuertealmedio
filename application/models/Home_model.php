@@ -18,6 +18,15 @@ class Home_model extends CI_Model {
     	return $resultado->result_array();
     }
 
+    function get_carrusel()
+    {
+   	
+    	$resultado = $this->db->query("	SELECT *
+						    			FROM carrusel p  " );
+
+    	return $resultado->result_array();
+    }
+
 
 }
 

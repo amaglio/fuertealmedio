@@ -15,6 +15,7 @@ class Home extends CI_Controller {
 		$datos["footer"] = $this->load->view('estructura/footer', '', true); 
 
 		$datos["noticias"] =  $this->Home_model->get_publicaciones();
+		$datos["carrusel"] =  $this->Home_model->get_carrusel();
 
 		$this->load->view('home.php',$datos);
 	}

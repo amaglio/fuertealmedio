@@ -33,7 +33,7 @@ class Administrador extends CI_Controller {
 			$crud->set_table('carrusel');
 			$crud->set_subject('Carrusel');
 			$crud->required_fields('titulo', 'descripcion', 'path_imagen');
-			$crud->columns('id_carrusel','titulo', 'descripcion', 'path_imagen');
+			$crud->columns('id_carrusel','titulo', 'titulo2', 'descripcion', 'path_imagen');
  
 			$crud->display_as('path_imagen','Imagen'); 
  			$crud->set_field_upload('path_imagen','assets/img/carrusel');

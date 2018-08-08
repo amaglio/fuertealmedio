@@ -14,10 +14,10 @@
                   </div>
                   <div class="col-md-4 col-xs-12 " > 
                         <ul class="item-footer">
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_home"> Home</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_publicaciones">Publicaciones</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_nuestra_cancha">Nuestra cancha</a></li>
-                            <li><i class="far fa-futbol"></i>  <a class="link_footer nav-link js-scroll-trigger" href="#seccion_contacto">Contacto</a></li> 
+                            <li><i class="fas fa-angle-right"></i> <a class="link_footer nav-link js-scroll-trigger" href="#seccion_home"> Home</a></li>
+                            <li><i class="fas fa-angle-right"></i>   <a class="link_footer nav-link js-scroll-trigger" href="#seccion_publicaciones">Publicaciones</a></li>
+                            <li><i class="fas fa-angle-right"></i>   <a class="link_footer nav-link js-scroll-trigger" href="#seccion_nuestra_cancha">Nuestra cancha</a></li>
+                            <li><i class="fas fa-angle-right"></i> <a class="link_footer nav-link js-scroll-trigger" href="#seccion_contacto">Contacto</a></li> 
                         </ul>
                   </div>
                

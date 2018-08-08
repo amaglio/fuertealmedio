@@ -66,44 +66,34 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" id="carousel-inner" >
-                      <div class="item active">
-                         <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider1.jpg" alt="First slide">
-                         <div class="shadow"></div>
-                         
-                          <div class="container">
-                            <div class="slide_div_titulo">
-                            
-                              <p class="slide_titulo1">Apertura 2018</p>
-                              <p class="slide_titulo2">COMIENZA EL NUEVO TORNEO</p>
-                              <p class="slide_descripcion">Anotate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana y recopa.</p>
-                            </div>
-                          </div>
-                      </div>
 
-                      <div class="item">
-                        <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider2.jpg"  >
-                        <div class="shadow"></div>
-                        <div class="container">
-                            <div class="slide_div_titulo">
-                            
-                              <p class="slide_titulo1">Apertura 2018 y Recopa 2018</p>
-                              <p class="slide_titulo2">COMIENZA LA COPA DE CAMPEONES</p>
-                              <p class="slide_descripcion">Anoasd asd aa sdasdasd asdtate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana  asd as asdas dy recopa.</p>
-                            </div>
-                          </div>
-                      </div>
-                    
-                      <div class="item">
-                        <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/slider/slider3.jpg" alt="Third slide">
-                        <div class="shadow"></div>
-                        <div class="container">
-                            <div class="slide_div_titulo">
+                      <? $x=0; ?>
+                      <? foreach ($carrusel as $row): ?>
+
+
+                          <?  $active = '';  
+
+                            if( $x==0 ) $active = 'active';
+
+                          ?>
+
+                          <div class="item <?=$active?>">
+                             <img class="d-block w-100 imagen_slider" src="<?=base_url()?>assets/img/carrusel/<?=$row['path_imagen']?>" alt="First slide-<?=$row['path_imagen']?>">
+                             <div class="shadow"></div>
                              
-                              <p class="slide_titulo2">FELICITACIONES AL CAMPEON 2018</p>
-                              <p class="slide_descripcion">Anotate antes del 20 de Agosto y disfruta de la copa libertadores, sudamericana y recopa.</p>
-                            </div>
+                              
+                                <div class="slide_div_titulo">
+                                  <div class="container container_slider" >
+                                  <p class="slide_titulo1"><?=$row['titulo']?></p> 
+                                  <p class="slide_titulo2"><?=$row['titulo2']?></p>
+                                  <p class="slide_descripcion"><?=$row['descripcion']?></p>
+                                </div>
+                              </div>
                           </div>
-                      </div>
+
+                      <? $x++; ?>
+                      <? endforeach; ?>
+ 
                     </div>
    
                 </div>
@@ -193,16 +183,15 @@
         </div>
 
          
-          <div class="col-md-6 col-xs-12  " > 
-            <div class="parent" >
-              <div class="area-imagen">
+        <div class="col-md-6 col-xs-12  " > 
+          <div class="parent" >
+            <div class="area-imagen">
 
-                <img src="<?=base_url()?>assets/img/cancha/foto_cancha.jpg"  class="foto_cancha">
+              <img src="<?=base_url()?>assets/img/cancha/foto_cancha.jpg"  class="foto_cancha">
 
-              </div>
             </div>
           </div>
-       
+        </div>
 
         <div class="col-md-3 col-xs-12"> 
           <div class="parent" >
@@ -214,7 +203,7 @@
         <div class="col-md-3 col-xs-12"> 
           <div class="parent" >
               <div class="area-imagen">
-                <img src="<?=base_url()?>assets/img/cancha/foto_deck.jpg"  class="foto_cancha">  
+                <img src="<?=base_url()?>assets/img/cancha/cancha_futsal.png"  class="foto_cancha">  
               </div>
             </div>
         </div>
@@ -228,14 +217,14 @@
         <div class="col-md-3 col-xs-12"> 
           <div class="parent" >
               <div class="area-imagen">
-                <img src="<?=base_url()?>assets/img/cancha/foto_pileta.jpg"  class="foto_cancha">  
+                <img src="<?=base_url()?>assets/img/cancha/foto_deck2.png"  class="foto_cancha">  
               </div>
             </div>
         </div>
       </div>
     </section>
 
-    <!-- Escribinos -->
+    <!-- ESCRIBINOS -->
     <section id="seccion_contacto" class="seccion">  
       <div class="row">
         <div class="container">
@@ -247,8 +236,8 @@
           <div class="col-md-6 col-xs-12 " > 
             <?php // Change the css classes to suit your needs    
 
-            $attributes = array('class' => '', 'id' => '');
-            echo form_open('Home', $attributes); ?>
+            $attributes = array( 'id' => 'form_contacto', 'name' => 'form_contacto');
+            echo form_open('form_contacto', $attributes); ?>
 
             <p> 
                     <input placeholder="Nombre" class="form-control" id="nombre" type="text" name="nombre" maxlength="100" value="<?php echo set_value('nombre'); ?>"  />
@@ -260,6 +249,10 @@
 
             <p>  
                    <input placeholder="Email" class="form-control" id="email" type="text" name="email" maxlength="100" value="<?php echo set_value('email'); ?>"  />
+            </p>
+
+            <p>  
+                   <input placeholder="WhatsApp" class="form-control" id="whatsapp" type="text" name="whatsapp" maxlength="100" value="<?php echo set_value('whatsapp'); ?>"  />
             </p>
 
             <p>
@@ -290,5 +283,55 @@
 
 </section>
  
+
+<!-- Validaciones -->
+
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.10.custom.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="<?=base_url()?>assets/js/jquery.validate.js" ></script>
+<script language="javascript" type="text/javascript" src="<?=base_url()?>assets/js/additional-methods.js" ></script> 
+
+<script>
+var jq_va = jQuery.noConflict();
+</script>
+
+<script type="text/javascript">
+ 
+    jq_va(function(){
+
+            jq_va('#form_contacto').validate({
+
+                rules :{
+
+                        nombre : {
+                            required : true 
+                        },
+                        email : {
+                            required : true 
+                        },
+                        mensaje : {
+                            required : true,
+                            email: true 
+                        }  
+                },
+                messages : {
+
+                        nombre  : {
+                            required : "Ingresá tu nombre" 
+                        },
+                        email  : {
+                            required : "Ingresá tu email" 
+                        },
+                        mensaje : {
+                            required : "Ingresá tu mensaje",
+                              email: "Ingresá un email valido"
+                        }   
+                } 
+            });    
+    });
+
+</script>
+
 
 <?=$footer?>
