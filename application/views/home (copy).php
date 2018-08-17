@@ -1,11 +1,15 @@
 <?=$head?>
 
+ 
+
+  
+
 <link href="<?=base_url()?>/assets/css/home_css.css" rel="stylesheet">
 
 <style type="text/css">
   .parent {
     width: 100%;
-    /*margin: 20px;  */
+    margin: 20px;  
     overflow: hidden;
     position: relative;
     float: left;
@@ -38,10 +42,6 @@
 
 .parent:hover a, .parent:focus a {
     display: block;
-}
-
-#cargando{
-  display: none;
 }
  
 
@@ -145,41 +145,41 @@
            
             <section class="customer-logos slider">
               <div class="slide ">
-                  <a href="https://www.facebook.com/clubleloiroficial/" target="_blank"> <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/club_leloir.png"></a>
+                  <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/club_leloir.png">
               </div>
               
               <div class="slide ">
-                  <a href="https://argentina.gridohelado.com/" target="_blank"> <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/grido.jpg"></a>
+                  <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/grido.jpg">
               </div>
 
               <div class="slide"> 
-                  <a href="https://www.facebook.com/cdx1s/" target="_blank"> <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/porunsentido.jpg"></a>
+                  <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/porunsentido.jpg">
               </div> 
 
               <div class="slide"> 
-                  <a href="https://www.rutatlantica.com.ar/" target="_blank"> <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/rutatlatica.jpg"></a>
+                  <img class="img_convenio" src="<?=base_url()?>assets/img/patrocinadores/rutatlatica.jpg">
               </div> 
 
               <div class="slide" > 
-                  <a href="https://www.facebook.com/SantoDomingoBS/" target="_blank"> <img class="img_convenio" style="padding-left: 50px;" src="<?=base_url()?>assets/img/patrocinadores/santo_domingo.jpg"></a>
+                  <img class="img_convenio" style="padding-left: 50px;" src="<?=base_url()?>assets/img/patrocinadores/santo_domingo.jpg">
               </div> 
             </section>
           </div>
           
         </div>
       </div> 
-      <!-- 
+
       <div class="row" id="patrocinadores_mobile">
           <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators  
+              <!-- Indicators -->
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
               </ol>
 
-              <!-- Wrapper for slides 
+              <!-- Wrapper for slides -->
               <div class="carousel-inner" id="carousel-inner" >
          
 
@@ -209,42 +209,8 @@
               </div>
             </div>
           </div>
-      </div> -->
-
-      <div class="row" id="patrocinadores_mobile">
-        <div class="container">
- 
-          <div class="col-xs-6" style=" display: flex !important; align-items: center !important; justify-content: center !important; padding-top: 20px;"  > 
-            <a href="https://www.facebook.com/clubleloiroficial/" target="_blank"> 
-              <img class="img-responsive" src="<?=base_url()?>assets/img/patrocinadores/club_leloir.png">
-            </a>
-          </div>
-          <div class="col-xs-6" style=" display: flex !important; align-items: center !important; justify-content: center !important; padding-top: 20px;" >
-            <a href="https://www.facebook.com/cdx1s/" target="_blank">
-              <img class="img-responsive" src="<?=base_url()?>assets/img/patrocinadores/porunsentido.jpg">
-            </a>
-          </div>
-
-          <div class="col-xs-6" style=" display: flex !important; align-items: center !important; justify-content: center !important; padding-top: 20px;" > 
-              <a href="https://argentina.gridohelado.com/" target="_blank">
-                <img class="img-responsive" src="<?=base_url()?>assets/img/patrocinadores/grido.jpg">
-              </a>
-          </div>
-           <div class="col-xs-6" style=" display: flex !important; align-items: center !important; justify-content: center !important; padding-top: 20px;" >
-              <a href="https://www.facebook.com/SantoDomingoBS/" target="_blank">
-                <img class="img-responsive"  src="<?=base_url()?>assets/img/patrocinadores/santo_domingo.jpg">
-              </a>
-           </div>
-
-          <div class=" col-xs-12 "  style="display: flex !important; align-items: center !important; justify-content: center !important; padding-top: 20px;" > 
-            <a href="https://www.rutatlantica.com.ar/" target="_blank">
-              <img class="img-responsive" src="<?=base_url()?>assets/img/patrocinadores/rutatlatica.jpg">
-            </a>
-          </div> 
-              
-        </div> 
-
       </div>
+
 
     </section>
 
@@ -314,7 +280,7 @@
             <?php // Change the css classes to suit your needs    
 
             $attributes = array( 'id' => 'form_consulta_web', 'name' => 'form_consulta_web');
-            echo form_open('', $attributes); ?>
+            echo form_open('procesa_consulta_web', $attributes); ?>
 
             <p> 
                     <input placeholder="Nombre" class="form-control" id="nombre" type="text" name="nombre" maxlength="100" value="<?php echo set_value('nombre'); ?>"  />
@@ -339,15 +305,8 @@
             </p>
 
 
-            <p>   
-                     <div id="success"></div>
-                        <?php 
-                          echo form_submit( 'submit', 'Enviar', ' id="submit_enviar_consulta" class="btn btn-primary btn-block" style="background-color: #228d87" '); 
-                        ?> 
-                        <img id="cargando" style="width:20px;" class="logo_web" src="<?=base_url()?>assets/img/loading.gif" alt="Logo img"> 
-                    
-
-                    
+            <p>
+                    <?php echo form_submit( 'submit', 'Enviar', 'class="btn btn-primary btn-block" style="background-color: #228d87" '); ?>
             </p>
 
             <?php echo form_close(); ?>
@@ -366,23 +325,18 @@
     </section>
 
 </section>
+ 
 
-<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"  ></script>
+<!-- Validaciones -->
 
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.10.custom.min.js"></script>
 
-<!-- Email -->
-
-<script>
-  var jq_c = jQuery.noConflict();
-</script>
-
-
-<script type="text/javascript" src="<?=base_url()?>assets/js/contact_me.js"  ></script>
-
-<!-- Validaciones --> 
+<script language="javascript" type="text/javascript" src="<?=base_url()?>assets/js/jquery.validate.js" ></script>
+<script language="javascript" type="text/javascript" src="<?=base_url()?>assets/js/additional-methods.js" ></script> 
 
 <script>
-  var jq_va = jQuery.noConflict();
+var jq_va = jQuery.noConflict();
 </script>
 
 <script type="text/javascript">
@@ -390,7 +344,7 @@
     jq_va(function(){
 
             jq_va('#form_consulta_web').validate({
-                ignore: "",
+
                 rules :{
 
                         nombre : {
@@ -417,119 +371,11 @@
                         mensaje : {
                             required : "Ingresá tu mensaje"
                         }   
-                },
-                submitHandler: function(form) 
-                {
-
-                   //alert(form.elements["nombre"].value)
-                    var nombre = form.elements["nombre"].value;
-                    var apellido = form.elements["apellido"].value;
-                    var email = form.elements["email"].value;
-                    var mensaje = form.elements["mensaje"].value; 
-                    // var mensaje = "aaaaa"; 
-                    var whatsapp = form.elements["whatsapp"].value; 
-                 
-                    $this = jq_c("#submit_enviar_consulta");
-                    $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
-
-                 
-                    jq_c.ajax({
-                              url: CI_ROOT+'index.php/Home/procesa_consulta_web',
-                              data: {   nombre: nombre,
-                                        apellido: apellido,
-                                        email: email,
-                                        whatsapp: whatsapp,
-                                        mensaje: mensaje },
-                              async: true,
-                              type: 'POST',
-                              dataType: 'JSON',
-                              success: function(data)
-                             {  
-                                //$("#cargando").hide();
-                                
-                                if(data.error == false)
-                                {
-                                  //alert("Bien");
-                                  jq_c('#success').html("<div class='alert alert-success'>");
-                                  jq_c('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                    .append("</button>");
-                                  jq_c('#success > .alert-success')
-                                    .append("<strong>Tu mensaje ha sido enviado exitosamente y será respondido a la brevedad. </strong>");
-                                  jq_c('#success > .alert-success')
-                                    .append('</div>');
-                                  //clear all fields
-                                  jq_c('#form_consulta_web').trigger("reset");
-                                }
-                                else
-                                {
-                                  //alert("Mal");
-                                  jq_c('#success').html("<div class='alert alert-danger'>");
-                                  jq_c('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                    .append("</button>");
-                                  jq_c('#success > .alert-danger').append(jq_c("<strong>").text("Ha ocurrido un error, por favor, intente mas tarde o escribinos a nuestro email"));
-                                  jq_c('#success > .alert-danger').append('</div>');
-                                  //clear all fields
-                                  jq_c('#form_consulta_web').trigger("reset");
-                                }
-
-
-                              },
-                              error: function(x, status, error){
-                                  jq_c("#cargando").hide();
-                                  jq_c('#success').html("<div class='alert alert-danger'>");
-                                  jq_c('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                                    .append("</button>");
-                                  jq_c('#success > .alert-danger').append(jq_c("<strong>").text("Ha ocurrido un error, por favor intente más tarde o escribinos a nuestro."));
-                                  jq_c('#success > .alert-danger').append('</div>');
-                                  //clear all fields
-                                  jq_c('#form_consulta_web').trigger("reset");
-                              },
-                              complete: function() {
-                                setTimeout(function() {
-                                  $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
-                                }, 1000);
-                              } 
-                    });
                 } 
             });    
     });
 
 </script>
-
-<!-- Slider logos --> 
-
-<script>
-  var jq_sc = jQuery.noConflict();
-</script>
-
-<script type="text/javascript">
-
-  
-  jq_sc(document).ready(function(){
-    jq_sc('.customer-logos').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      autoplay: false,
-      autoplaySpeed: 1000,
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 3
-        }
-      }]
-    });
-  });
-
-</script> 
-
 
 
 <?=$footer?>

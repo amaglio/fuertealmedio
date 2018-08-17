@@ -27,6 +27,20 @@ class Home_model extends CI_Model {
     	return $resultado->result_array();
     }
 
+    function add_consulta_web($array)
+    {
+    
+        $array_consulta_web['nombre'] = $array['nombre'];
+        $array_consulta_web['mensaje'] = $array['mensaje'];
+
+        if($array['apellido']) $array_consulta_web['apellido'] = $array['apellido'];
+        if($array['email']) $array_consulta_web['email'] = $array['email'];
+        if($array['whatsapp']) $array_consulta_web['whatsapp'] = $array['whatsapp']; 
+
+        return $this->db->insert('contacto',$array_consulta_web);
+ 
+    }
+
 
 }
 

@@ -18,31 +18,33 @@ if(!function_exists('mensaje_resultado'))
 
 if(!function_exists('enviar_email'))
 {
-    function enviar_email($array )
+    function enviar_email($array)
     {   
         $CI =& get_instance();
 
         $CI->load->library("email"); 
+ 
+        // LOCALHOST
 
+        // $configuracion = array(
+        //     'protocol' => 'smtp',
+        //     'smtp_host' => 'ssl://smtp.googlemail.com',
+        //     'smtp_port' => 465,
+        //     'smtp_user' => 'digipayargentina@gmail.com',
+        //     'smtp_pass' => 'digipay2016',
+        //     'mailtype' => 'html',
+        //     'charset' => 'utf-8',
+        //     'newline' => "\r\n"
+        // );
 
-        /*
+        // WEB
+
         $configuracion = array(
             'protocol' => 'smtp',
-            'smtp_host' => '10.0.0.3',
-            'smtp_port' => 25,
-            'smtp_user' => '',
-            'smtp_pass' => '',
-            'mailtype' => 'html',
-            'charset' => 'utf-8',
-            'newline' => "\r\n"
-        );*/
-
-        $configuracion = array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_port' => 465,
-            'smtp_user' => 'digipayargentina@gmail.com',
-            'smtp_pass' => 'digipay2016',
+            'smtp_host' => 'localhost',
+            'smtp_port' => 21,
+            'smtp_user' => 'info@torneofuertealmedio.com',
+            'smtp_pass' => 'info2018',
             'mailtype' => 'html',
             'charset' => 'utf-8',
             'newline' => "\r\n"
@@ -51,26 +53,21 @@ if(!function_exists('enviar_email'))
         //Cargamos la configuración 
 
         $CI->email->initialize($configuracion);
-        $CI->email->from( "info@fundacionsidom.com" ,  "Contacto página web");
-        $CI->email->subject("[SIDOM] Fundación SIDOM");
+        $CI->email->from( "info@fuertealmedio.com" ,  "Contacto página web");
+        $CI->email->subject("[FAM] Contato de Fuerte al medio");
         
         $mensaje_email = 'Contacto WEB <br>';
 
-        $mensaje_email = "<strong>Nombre: </strong>".$array['nombre'].', '.$array['apellido']."<br>";
-        $mensaje_email .= "<strong>Email: </strong>".$array['email']."<br>";
-        $mensaje_email .= "<strong>Motivo: </strong>".$array['email']."<br>";
+        $mensaje_email = "<strong>Nombre: </strong>".$array['nombre']."<br>";
+        $mensaje_email .= "<strong>Email: </strong>".$array['email']."<br>"; 
 
-        if(isset($array['telefono']))
-           $mensaje_email .= "<strong>Telefono: </strong>".$array['telefono']."<br>";
+        if(isset($array['whatsapp']))
+           $mensaje_email .= "<strong>Whatsapp: </strong>".$array['whatsapp']."<br>";
 
-        if(isset($array['consulta']))
-           $mensaje_email .= "<strong>Consulta: </strong>".$array['consulta']."<br>";
+        if(isset($array['mensaje']))
+           $mensaje_email .= "<strong>Mensaje: </strong>".$array['mensaje']."<br>";
 
         $CI->email->message($mensaje_email);
-
-        //$CI->email->to('informes@fundacionsidom.org'); 
-        //$CI->email->bcc('adrian.magliola@gmail.com');
-          
         
         $CI->email->to('adrian.magliola@gmail.com');
 

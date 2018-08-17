@@ -24,9 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url']	= 'http://localhost/fuertealmedio';
-//$config['base_url']	= 'http://www.fundacionsidom.org/desarrollo/';
-//$config['base_url'] = 'http://www.cristinamoro.com.ar/sidom';
-//$config['base_url'] = 'http://www.fundacionsidom.org/';
+//$config['base_url']	= 'http://www.torneofuertealmedio.com/'; 
 
 /*
 |--------------------------------------------------------------------------
@@ -227,7 +225,7 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 2;
 
 /*
 |--------------------------------------------------------------------------

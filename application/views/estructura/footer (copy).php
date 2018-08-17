@@ -8,8 +8,8 @@
                   <div class="col-md-4 col-xs-12 "> 
 
                         <p>V. Gerde 97, B1718BLA San Antonio de Padua, Buenos Aires</p>
-                        <p>+54 11 5469-9405</p>
-                        <p>info@torneofuertealmedio.com</p>
+                        <p>+5411 5873 1547</p>
+                        <p>+5411 6874 9618 </p>
 
                   </div>
                   <div class="col-md-4 col-xs-12 " > 
@@ -64,28 +64,49 @@
   <!-- Plugin JavaScript -->
   <script type="text/javascript" src="<?=base_url()?>assets/js/jquery-easing/jquery.easing.min.js"></script>
 
- 
+  <!-- Custom JavaScript for this theme -->
+  <script type="text/javascript" src="<?=base_url()?>assets/js/scrolling-nav.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+   
 
   <!-- Jquery validate  -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js" ></script>
- 
-  <script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js" ></script>
+
+
+    <script>
     var jq_va = jQuery.noConflict();
   </script>
   
-
-
-   <!-- Scroll vertical -->
-  <script type="text/javascript" src="<?=base_url()?>assets/js/scrolling-nav.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
-  <script>
-    var jq_sc = jQuery.noConflict();
-  </script>
-
+  <script type="text/javascript">
  
+    
+    jq_va(document).ready(function(){
+      jq_va('.customer-logos').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 520,
+          settings: {
+            slidesToShow: 3
+          }
+        }]
+      });
+    });
+ 
+  </script> 
 
 
 </html>

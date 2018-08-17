@@ -41,7 +41,7 @@ $config = array(
                                         )
                                 ),
 
-            'procesa_contacto' => array(
+            'procesa_consulta_web' => array(
                                     array(
                                             'field' => 'nombre',
                                             'label' => 'nombre',
@@ -50,27 +50,22 @@ $config = array(
                                     array(
                                             'field' => 'apellido',
                                             'label' => 'apellido',
-                                            'rules' => 'required|trim|xss_clean'
+                                            'rules' => 'trim|xss_clean'
                                         ),
                                     array(
                                             'field' => 'email',
                                             'label' => 'email',
-                                            'rules' => 'required|trim|xss_clean'
+                                            'rules' => 'required|trim|xss_clean|valid_email'
                                         ),
                                     array(
                                             'field' => 'telefono',
                                             'label' => 'telefono',
                                             'rules' => 'trim|xss_clean'
-                                        ),
+                                        ), 
                                     array(
-                                            'field' => 'id_motivo',
-                                            'label' => 'id_motivo',
-                                            'rules' => 'trim|xss_clean'
-                                        ),
-                                    array(
-                                            'field' => 'consulta',
+                                            'field' => 'mensaje',
                                             'label' => 'consulta',
-                                            'rules' => 'trim|xss_clean'
+                                            'rules' => 'required|trim|xss_clean'
                                         )
                                 ) 
                                 

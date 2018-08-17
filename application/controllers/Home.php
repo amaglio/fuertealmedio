@@ -10,7 +10,7 @@ class Home extends CI_Controller {
 
 	function index()
 	{	
-		$datos_head["titulo"] = "SIDOM - Home";
+		$datos_head["titulo"] = "Torneo Fuerte al Medio";
 		$datos["head"] = $this->load->view('estructura/head', $datos_head, true);
 		$datos["footer"] = $this->load->view('estructura/footer', '', true); 
 
@@ -20,12 +20,53 @@ class Home extends CI_Controller {
 		$this->load->view('home.php',$datos);
 	}
 
-	function index2()
-	{	
- 
-		$this->load->view('home2.php');
+	// function index2()
+	// {	
+	// 	$this->load->view('home2.php');
+	// }
+
+	function procesa_consulta_web()
+	{			
+		chrome_log("Home/procesa_contacto_web");
+
+		if ($this->form_validation->run('procesa_consulta_web') == FALSE):
+
+			chrome_log("No paso validacion");
+			$this->session->set_flashdata('mensaje', 'Error: no paso la validacion.');
+			$datos['error'] = true;
+			$datos['mensaje'] = 'Error: no paso la validacion.';
+
+		else:
+
+			chrome_log("Paso validacion");
+
+			$resultado = $this->Home_model->add_consulta_web($this->input->post());
+
+
+			$resultado_email = enviar_email($this->input->post());
+
+
+			if( $resultado > 0):
+
+				$this->session->set_flashdata('mensaje', 'Consulta enviada exitosamente');
+				$datos['error'] = false;
+				$datos['mensaje'] = 'Consulta enviada exitosamente';
+
+			else:
+
+				$this->session->set_flashdata('mensaje', 'Error interno, por favor intente mas tarde.');
+				$datos['error'] = true;
+				$datos['mensaje'] = 'Error interno, por favor intente mas tarde.';
+
+			endif; 
+
+		endif;	
+
+		print json_encode($datos);
+
 	}
 
+	/*
 	function procesa_contacto_web()
 	{			
 		$this->form_validation->set_rules('nombre', 'Nombre', 'required|trim|xss_clean|max_length[100]');			
@@ -63,6 +104,7 @@ class Home extends CI_Controller {
 			}
 		}
 	}
+	*/
 
 	function success()
 	{
