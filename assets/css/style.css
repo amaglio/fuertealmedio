@@ -408,7 +408,7 @@ background-color: white;
 .titulo{
   font-size: 36px;
   font-weight: 500;
-  padding-bottom: 80px !important; 
+  padding-bottom: 80px; 
   text-align: center;
 }
 
@@ -439,7 +439,7 @@ iframe{
     width: -webkit-fill-available;
     min-height: 200px;
     height: auto;
-    padding-bottom: 20px; 
+    /*padding-bottom: 20px; */
 }
 
 #patrocinadores_mobile{
@@ -616,10 +616,13 @@ div.parent{
   .titulo{
     line-height: 1.2;
     font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 40px;
   }
 
   .seccion{
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .navbar-toggle { 
@@ -659,7 +662,6 @@ div.parent{
     justify-content: center !important;
 
   }
-
 
 }
 

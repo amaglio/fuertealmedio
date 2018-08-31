@@ -43,7 +43,74 @@
 #cargando{
   display: none;
 }
+
  
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+  float: left;
+  width: 33%;
+  height: 10px;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+ol.carousel-indicators li.active {
+  background: #fec400;
+}
+
+.carousel-control.left , .carousel-control.right{
+  background-image: none !important;
+}
+
+.carousel-control 
+{
+  font-size: 50px !important ;
+  width: 8%;
+  top: 50%;
+}
+ 
+.titulo_publicacion
+{
+  top: 65%; 
+  position: absolute;
+  left: 40px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 80%;
+      background-color: #ffc200e6;
+    padding: 5px;
+    line-height: 12px;
+
+    color: #292828;
+}
+
+.descripcion_publicacion
+{
+  position: absolute;
+  top: 75%;
+ 
+  left: 40px;
+  font-size: 12px; 
+      line-height: normal;
+      width: 80%;
+          background-color: #ffc200e6;
+    padding: 5px;
+    line-height: 12px;
+
+    color: #292828;
+} 
+
 
 </style>
 
@@ -93,9 +160,13 @@
 
                       <? $x++; ?>
                       <? endforeach; ?>
- 
+                        
+                       
+
                     </div>
-   
+                     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+   i
                 </div>
               </div>
            
@@ -112,7 +183,13 @@
                 ULTIMAS <span class="titulo_verde"> PUBLICACIONES</span>
               </div>
         
-            <?  foreach ($noticias as $row): 
+            <?  $i = 0;
+
+                foreach ($noticias as $row): 
+                 
+
+                  if($i == 0 OR $i == 3 OR $i == 6 OR $i == 9)  echo "<div class='row' style='margin-bottom:20px'> ";
+              
 
                   if(isset( $row['iframe'] )):
 
@@ -124,7 +201,23 @@
 
                     <?
 
+                  else: ?>
+
+                      <div class="col-md-4 col-xs-12  " >
+                        
+                         
+                          <div><img class="img-responsive" src="<?=base_url()?>assets/img/publicacion/<?=$row['path_imagen']?>"></div>
+                          <div class="titulo_publicacion"> <?=$row['titulo']?> </div>
+                          <div class="descripcion_publicacion"> <?=$row['descripcion']?> </div>
+                         
+                      </div>
+
+              <?
                   endif;
+
+                  if($i == 2 OR $i == 5 OR $i == 8 OR $i == 11)  echo "</div> ";
+
+                  $i++;
             ?>     
 
             <?  endforeach; ?>

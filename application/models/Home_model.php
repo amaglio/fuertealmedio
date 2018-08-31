@@ -13,7 +13,9 @@ class Home_model extends CI_Model {
     {
    	
     	$resultado = $this->db->query("	SELECT *
-						    			FROM publicacion p  " );
+						    			FROM publicacion p  
+                                        ORDER BY id_publicacion  DESC 
+                                        LIMIT 12" );
 
     	return $resultado->result_array();
     }
